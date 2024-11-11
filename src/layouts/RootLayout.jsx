@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const RootLayout = () => {
   return (
-    <div className=" w-[90%] mx-auto h-screen">
+    <div className=" w-[90%] mx-auto h-screen flex flex-col">
       <header className=" flexn items-center justify-between">
         <Link to={"/"}>
           <h2>Rexai</h2>
@@ -11,7 +11,7 @@ const RootLayout = () => {
 
         <div>user</div>
       </header>
-      <main>
+      <main className="flex-1 overflow-hidden">
         <Outlet />
       </main>
     </div>

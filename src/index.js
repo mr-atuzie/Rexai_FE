@@ -7,6 +7,8 @@ import Dashboard from "./screens/Dashboard";
 import ChatPage from "./screens/ChatPage";
 import RootLayout from "./layouts/RootLayout";
 import DasboardLayout from "./layouts/DasboardLayout";
+import SignIn from "./screens/SignIn";
+import SignUp from "./screens/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/signin",
+        element: <SignIn />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
       },
       {
         element: <DasboardLayout />,

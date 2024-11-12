@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 const RootLayout = () => {
   return (
     <div className=" w-[90%] mx-auto h-screen flex flex-col">
-      <header className=" flexn items-center justify-between">
+      <header className=" flex items-center justify-between">
         <Link to={"/"}>
           <h2>Rexai</h2>
         </Link>

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomeImg from "../assets/ai.jpg";
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
+  const [typingStatus, setTypingStatus] = useState("human");
   return (
     <div className=" flex items-center gap-[100px] h-screen">
       <div className=" flex-1 flex flex-col  items-center gap-2 justify-center ">
@@ -24,8 +26,48 @@ const Home = () => {
         </Link>
       </div>
 
-      <div className=" flex-1">
+      <div className=" relative flex-1">
         <img className=" rounded" src={HomeImg} alt="" />
+        <div className=" flex gap-3 p-2 absolute bg-black bottom-0  w-[60%] right-0">
+          <img
+            className=" w-6 h-6 rounded-full object-cover"
+            src={
+              typingStatus === "human"
+                ? "https://media.istockphoto.com/id/1347495868/photo/smiling-african-american-man-wearing-glasses.jpg?s=612x612&w=0&k=20&c=QMCbWu-AOfLDkQMsX-qX2xHFZAL56tx_uVucZ5rBxv8="
+                : "https://mdrregulator.com/wp-content/uploads/2024/08/publication_of_the_ai_act_in_the_official_journal_of_the_eu-730x640.webp"
+            }
+            alt=""
+          />
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "human:We produce food for Mice",
+              2000,
+              () => {
+                setTypingStatus("bot");
+              },
+              "bot:We produce food for Hamsters",
+              2000,
+              () => {
+                setTypingStatus("human");
+              },
+              "human2:We produce food for Guinea Pigs",
+              2000,
+              () => {
+                setTypingStatus("bot");
+              },
+              "We produce food for Chinchillas",
+              2000,
+              () => {
+                setTypingStatus("human");
+              },
+            ]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+            omitDeletionAnimation={true}
+          />
+        </div>
       </div>
     </div>
   );

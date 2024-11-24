@@ -7,7 +7,7 @@ const RootLayout = () => {
     <div className=" w-[95%] mx-auto h-screen flex flex-col">
       <header className=" flex py-4 items-center justify-between">
         <Link className=" flex items-center gap-2" to={"/"}>
-          <img width={30} height={30} src={logo} alt="" />
+          <img width={25} height={25} src={logo} alt="" />
           <h2 className=" uppercase text-xl font-bold">Rexai</h2>
         </Link>
 

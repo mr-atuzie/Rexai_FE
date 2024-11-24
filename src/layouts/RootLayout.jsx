@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 const RootLayout = () => {
   return (
-    <div className=" w-[90%] mx-auto h-screen flex flex-col">
+    <div className=" w-[95%] mx-auto h-screen flex flex-col">
       <header className=" flex py-4 items-center justify-between">
         <Link className=" flex items-center gap-2" to={"/"}>
           <img width={30} height={30} src={logo} alt="" />

@@ -27,11 +27,6 @@ const ChatList = () => {
         <Link to={"/dashboard"}>My chat title</Link>
         <Link to={"/dashboard"}>My chat title</Link>
         <Link to={"/dashboard"}>My chat title</Link>
-        <Link to={"/dashboard"}>My chat title</Link>
-        <Link to={"/dashboard"}>My chat title</Link>
-        <Link to={"/dashboard"}>My chat title</Link>
-        <Link to={"/dashboard"}>My chat title</Link>
-        <Link to={"/dashboard"}>My chat title</Link>
       </div>
       <hr />
 

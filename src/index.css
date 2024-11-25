@@ -4,8 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12101b; /* Match your background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b3b3b; /* Subtle contrast for the thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555; /* Brighter on hover */
+}
+
 body {
-  background-color: black;
+  background-color: #0e0c16;
   color: #ececec;
   font-family: "Roboto", sans-serif;
 }

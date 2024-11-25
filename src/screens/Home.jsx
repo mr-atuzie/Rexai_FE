@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomeImg from "../assets/ai.jpg";
 import { TypeAnimation } from "react-type-animation";
-// import logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 
 const Home = () => {
   const [typingStatus, setTypingStatus] = useState("human");
 
   return (
-    <div className="   flex flex-col lg:flex-row items-center justify-center gap-[50px] lg:gap-[100px]   relative">
+    <div className="   flex flex-col lg:flex-row items-center justify-center gap-[50px] lg:gap-[100px]  h-screen  relative">
       <div className=" flex-1 flex flex-col  items-center gap-2 justify-center ">
         <h1 className=" text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-blue-500 from-purple-600">
           REXAI
@@ -83,7 +83,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className=" flex flex-col justify-center items-center w-full fixed bottom-6 ">
+      <div className=" flex flex-col justify-center items-center w-full fixed bottom-6 ">
         <img width={20} height={20} src={logo} alt="" />
 
         <div className=" flex text-xs gap-2 mt-2 text-[#888]">
@@ -91,7 +91,7 @@ const Home = () => {
           <span>|</span>
           <p>Privacy Policy</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

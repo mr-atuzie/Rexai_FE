@@ -8,7 +8,7 @@ const DasboardLayout = () => {
       <div className=" flex-[1]">
         <ChatList />
       </div>
-      <div className=" flex-[4] bg-[#12101b] text-[#FFFFFF]  ">
+      <div className=" flex-[4] bg-[#12101b] py-5 text-[#FFFFFF]  ">
         <Outlet />
       </div>
     </div>

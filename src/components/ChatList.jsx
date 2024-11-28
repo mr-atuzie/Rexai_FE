@@ -22,7 +22,7 @@ const ChatList = () => {
       <hr className=" border-none h-[1px] bg-gray-600 my-5" />
 
       <h1 className=" font-medium mb-2 text-sm text-gray-400">RECENT CHATS</h1>
-      <div className=" flex flex-col overflow-y-scroll min-h-80">
+      <div className=" flex flex-col overflow-y-scroll min-h-96">
         <Link to={"/dashboard"} className=" rounded-lg hover:bg-[#2c2937] p-2">
           My chat title
         </Link>

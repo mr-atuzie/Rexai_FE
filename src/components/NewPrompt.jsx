@@ -1,8 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoIosSend } from "react-icons/io";
-import { IoMdAttach } from "react-icons/io";
+import Upload from "./Upload";
+import { IKImage } from "imagekitio-react";
 
 const NewPrompt = () => {
+  const [img, setImg] = useState({
+    isLoading: false,
+    error: "",
+    dbData: {},
+  });
   const endRef = useRef(null);
 
   useEffect(() => {
@@ -10,16 +16,17 @@ const NewPrompt = () => {
   }, []);
   return (
     <>
-      <h1>TEST</h1>
-
+      {img.isLoading && <div>Loading...</div>}
+      {img.dbData?.filePath && (
+        <IKImage
+          urlEndpoint={process.env.REACT_APP_IMG_KIT_ENDPOINT}
+          path={img.dbData?.filePath}
+          width="380"
+        />
+      )}
       <div ref={endRef} className=" pb-[100px]" />
       <form className=" w-[50%] bg-[#2c2937] rounded-xl flex items-center absolute bottom-0 px-4">
-        <label
-          className=" bg-[#605e68] border-none flex justify-center items-center p-2 h-9 w-9 rounded-full "
-          htmlFor="file"
-        >
-          <IoMdAttach />
-        </label>
+        <Upload setImg={setImg} />
         <input className=" hidden" id="file" type="file" multiple={false} />
 
         <input
